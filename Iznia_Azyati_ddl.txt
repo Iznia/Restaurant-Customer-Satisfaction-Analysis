@@ -1,0 +1,39 @@
+1. URL Dataset:
+    
+    https://www.kaggle.com/datasets/rabieelkharoua/predict-restaurant-customer-satisfaction-dataset/data
+
+
+2. DDL:
+
+CREATE TABLE table_m3 (
+    "CustomerID" INT PRIMARY KEY,
+    "Age" INT,
+    "Gender" VARCHAR(10),
+    "Income" INT,
+    "VisitFrequency" VARCHAR(20),
+    "AverageSpend" FLOAT,
+    "PreferredCuisine" VARCHAR(50),
+    "TimeOfVisit" VARCHAR(20),
+    "GroupSize" INT,
+    "DiningOccasion" VARCHAR(50),
+    "MealType" VARCHAR(20),
+    "OnlineReservation" BOOLEAN,
+    "DeliveryOrder" BOOLEAN,
+    "LoyaltyProgramMember" BOOLEAN,
+    "WaitTime" FLOAT,
+    "ServiceRating" INT,
+    "FoodRating" INT,
+    "AmbianceRating" INT,
+    "HighSatisfaction" BOOLEAN
+);
+
+
+3. DML:
+
+
+-- Insert data dengan COPY
+\COPY table_m3 FROM 'D:\.Hacktiv8\Bahan Materi\Phase 2\Milestone 3\p2-ftds032-rmt-ml3-Iznia\P2M3_Iznia_Azyati_data_raw.csv' DELIMITER ',' CSV HEADER;
+
+-- Display Data
+SELECT * FROM table_m3
+
